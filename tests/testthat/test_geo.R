@@ -1,4 +1,4 @@
-testthat::context("Geographic queries")
+# Geographic queries -----
 # Have had to comment out tests. Wikidata query service having timeout issues that cause tests to fail
 
 

@@ -37,7 +37,7 @@ Imports:
     utils
 Suggests:
     markdown,
-    testthat,
+    testthat (>= 3.0.0),
     tidyverse,
     knitr,
     pageviews,
@@ -46,3 +46,4 @@ RoxygenNote: 7.3.2
 Encoding: UTF-8
 Depends: R (>= 3.5.0)
 Language: en-US
+Config/testthat/edition: 3
