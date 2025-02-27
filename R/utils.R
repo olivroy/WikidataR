@@ -458,7 +458,7 @@ unspecial <- function(x){
   out <- x
   for(i in 1:ncol(x)){
     out[[i]] <- iconv(x[[i]],to = 'ASCII//TRANSLIT')
-    if(Hmisc::all.is.numeric(x[[i]])){
+    if(all_numeric(x[[i]])){
       out[[i]] <- as.numeric(out[[i]])
     }else{
       out[[i]] <- as.factor(out[[i]])
@@ -559,4 +559,19 @@ createrows.tidy <- function(QS.tib){
   #replace new empty rows with 'CREATE' row
   out[apply(is.empty(out),all,MARGIN=1),1] <- "CREATE"
   return(out)
+}
+
+
+all_numeric <- function(x) {
+  x <- sub("[[:space:]]+$", "", x)
+  x <- sub("^[[:space:]]+", "", x)
+  # remove empty 
+  xs <- x[nzchar(x)]
+  
+  if (length(xs) == 0 || all(is.na(x))) {
+    return(FALSE)
+  }
+  
+  isnon <- suppressWarnings(!is.na(xs) & is.na(as.numeric(xs)))
+  !any(isnon)
 }
