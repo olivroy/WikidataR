@@ -12,7 +12,7 @@
 #'it appropriately. This function is vectorized and will happily accept
 #'multiple IDs.
 #'
-#'@param \\dots further arguments to pass to de{httr:ink[httr::GET]{GET}}.
+#'@param ... further arguments to pass to \link[httr:GET]{GET}.
 #'
 #'@seealso \code{\link{get_random}} for selecting a random item or property,
 #'or \code{\link{find_item}} for using search functionality to pull out
@@ -57,7 +57,7 @@ get_property <- function(id, ...){
 #'
 #'@param limit how many random items to return. 1 by default, but can be higher.
 #'
-#'@param \\dots arguments to pass to de{httr:ink[httr::GET]{GET}}.
+#'@param ... arguments to pass to \link[httr:GET]{GET}.
 #'
 #'@seealso \code{\link{get_item}} for selecting a specific item or property,
 #'or \code{\link{find_item}} for using search functionality to pull out
@@ -140,7 +140,7 @@ get_example <- function(example_name){
 #'
 #'@param limit The number of results to return; set to \code{10} by default.
 #'
-#'@param \\dots further arguments to pass to de{httr:ink[httr::GET]{GET}}.
+#'@param ... further arguments to pass to \link[httr:GET]{GET}.
 #'
 #'@seealso \code{\link{get_random}} for selecting a random item or property,
 #'or \code{\link{get_item}} for selecting a specific item or property.
@@ -188,7 +188,7 @@ find_property <- function(search_term,
 #'consist of an ISO language code. Set to "en" by default.
 #'@param limit the number of results to return; set to 10 by default.
 #'@param type type of wikidata object to return (default = "item")
-#'@param \\dots Additional parameters to supply to [httr::POST]
+#'@param ... Additional parameters to supply to [httr::POST()]
 #'@return If the inputted string matches an item label, return its QID.
 #'If the inputted string matches multiple labels of multiple items, return the QID of the first hit.
 #'If the inputted string is already a QID, return the string.

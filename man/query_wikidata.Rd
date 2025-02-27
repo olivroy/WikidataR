@@ -14,7 +14,7 @@ query_wikidata(sparql_query, format = "tibble", ...)
 `smart` fetches JSON-formatted data and returns a tibble with datetime
 columns converted to `POSIXct`.}
 
-\item{\\dots}{Additional parameters to supply to \code{httr:\link[httr::POST]{POST}}.}
+\item{...}{Additional parameters to supply to \code{httr:\link[httr:POST]{POST}}.}
 }
 \value{
 A `tibble` or `vector`. Note: QID values will be returned as QIDs, rather than URLs.

@@ -28,7 +28,7 @@ consist of an ISO language code. Defaults to \code{"en"}.}
 
 \item{limit}{The number of results to return; set to \code{10} by default.}
 
-\item{\\dots}{further arguments to pass to de{httr:ink[httr::GET]{GET}}.}
+\item{...}{further arguments to pass to \link[httr:GET]{GET}.}
 }
 \value{
 A list containing the result of the query.

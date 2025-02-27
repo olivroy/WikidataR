@@ -12,7 +12,7 @@ for PID properties.}
 
 \item{limit}{How many random object to return.}
 
-\item{\\dots}{Additional parameters to supply to  \code{httr:\link[httr::POST]{POST}}.}
+\item{...}{Additional parameters to supply to  \code{httr:\link[httr:POST]{POST}}.}
 }
 \value{
 Downloaded full wikidata objects (items or properties) formatted 

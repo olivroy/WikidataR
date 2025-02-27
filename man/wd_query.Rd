@@ -9,7 +9,7 @@ wd_query(title, ...)
 \arguments{
 \item{title}{The Wikidata item or property as a string.}
 
-\item{\\dots}{Additional parameters to supply to  \code{httr:\link[httr::POST]{POST}}.}
+\item{...}{Additional parameters to supply to  \code{httr:\link[httr:POST]{POST}}.}
 }
 \value{
 A downloaded full wikidata object (item or property) formatted as a 

@@ -9,7 +9,7 @@ sparql_query(query, ...)
 \arguments{
 \item{query}{The SPARQL query as a string}
 
-\item{\\dots}{Additional parameters to supply to \code{httr:\link[httr::POST]{POST}}.}
+\item{...}{Additional parameters to supply to \code{httr:\link[httr:POST]{POST}}.}
 }
 \value{
 a download of the full wikidata objects formatted as a nested json list

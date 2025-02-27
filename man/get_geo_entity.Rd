@@ -19,11 +19,11 @@ to restrict the search to.}
 
 \item{limit}{the maximum number of results to return.}
 
-\item{\\dots}{further arguments to pass to de{httr:ink[httr::GET]{GET}}.}
+\item{...}{further arguments to pass to \link[httr:GET]{GET}.}
 }
 \value{
 a data.frame of 5 columns:
-\itemize{
+\describe{
  \item{item}{ the Wikidata identifier of each object associated with
  \code{entity}.}
  \item{name}{ the name of the item, if available, in the requested language. If it
@@ -42,16 +42,18 @@ a city).
 }
 \examples{
 # All entities
-\donttest{sf_locations <- get_geo_entity("Q62")}
+\donttest{
+sf_locations <- get_geo_entity("Q62")
 
 # Entities with French, rather than English, names
-\donttest{sf_locations <- get_geo_entity("Q62", language = "fr")}
+sf_locations <- get_geo_entity("Q62", language = "fr")
 
 # Entities within 1km
-\donttest{sf_close_locations <- get_geo_entity("Q62", radius = 1)}
+sf_close_locations <- get_geo_entity("Q62", radius = 1)
 
 # Multiple entities
-\donttest{multi_entity <- get_geo_entity(entity = c("Q62", "Q64"))}
+multi_entity <- get_geo_entity(entity = c("Q62", "Q64"))
+}
 
 }
 \seealso{

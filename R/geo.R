@@ -16,10 +16,10 @@
 #'
 #'@param limit the maximum number of results to return.
 #'
-#'@param \\dots further arguments to pass to de{httr:ink[httr::GET]{GET}}.
+#'@param ... further arguments to pass to \link[httr:GET]{GET}.
 #'
 #'@return a data.frame of 5 columns:
-#'\itemize{
+#'\describe{
 #'  \item{item}{ the Wikidata identifier of each object associated with
 #'  \code{entity}.}
 #'  \item{name}{ the name of the item, if available, in the requested language. If it
@@ -32,16 +32,18 @@
 #'
 #'@examples
 #'# All entities
-#'\donttest{sf_locations <- get_geo_entity("Q62")}
+#'\donttest{
+#'sf_locations <- get_geo_entity("Q62")
 #'
 #'# Entities with French, rather than English, names
-#'\donttest{sf_locations <- get_geo_entity("Q62", language = "fr")}
+#'sf_locations <- get_geo_entity("Q62", language = "fr")
 #'
 #'# Entities within 1km
-#'\donttest{sf_close_locations <- get_geo_entity("Q62", radius = 1)}
+#'sf_close_locations <- get_geo_entity("Q62", radius = 1)
 #'
 #'# Multiple entities
-#'\donttest{multi_entity <- get_geo_entity(entity = c("Q62", "Q64"))}
+#'multi_entity <- get_geo_entity(entity = c("Q62", "Q64"))
+#'}
 #'
 #'@seealso \code{\link{get_geo_box}} for using a bounding box
 #'rather than an unrestricted search or simple radius.
@@ -112,12 +114,11 @@ get_geo_entity <- function(entity, language = "en", radius = NULL, limit=100, ..
 #'@param language the two-letter language code to use for the name
 #'of the item. "en" by default.
 #'
-#'@param \\dots further arguments to pass to de{httr:ink[httr::GET]{GET}}.
+#'@param ... further arguments to pass to \link[httr:GET]{GET}.
 #'
 #'@return a data.frame of 5 columns:
-#'\itemize{
-#'  \item{item}{ the Wikidata identifier of each object associated with
-#'  \code{entity}.}
+#'\describe{
+#'  \item{item}{ the Wikidata identifier of each object associated with \code{entity}.}
 #'  \item{name}{ the name of the item, if available, in the requested language. If it
 #'  is not available, \code{NA} will be returned instead.}
 #'  \item{latitude}{ the latitude of \code{item}}
@@ -128,11 +129,13 @@ get_geo_entity <- function(entity, language = "en", radius = NULL, limit=100, ..
 #'
 #'@examples
 #'# Simple bounding box
-#'\donttest{bruges_box <- get_geo_box("Q12988", "NorthEast", "Q184287", "SouthWest")}
+#'\donttest{
+#'bruges_box <- get_geo_box("Q12988", "NorthEast", "Q184287", "SouthWest")
 #'
 #'# Custom language
-#'\donttest{bruges_box_fr <- get_geo_box("Q12988", "NorthEast", "Q184287", "SouthWest",
-#'                                         language = "fr")}
+#'bruges_box_fr <- get_geo_box("Q12988", "NorthEast", "Q184287", "SouthWest",
+#'                                         language = "fr")
+#'}
 #'
 #'@seealso \code{\link{get_geo_entity}} for using an unrestricted search or simple radius,
 #'rather than a bounding box.

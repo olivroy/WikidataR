@@ -16,7 +16,7 @@ even with an included namespace ("Property:P10") - the function will format
 it appropriately. This function is vectorized and will happily accept
 multiple IDs.}
 
-\item{\\dots}{further arguments to pass to de{httr:ink[httr::GET]{GET}}.}
+\item{...}{further arguments to pass to \link[httr:GET]{GET}.}
 }
 \description{
 \code{get_item} and \code{get_property} allow you to retrieve the data associated

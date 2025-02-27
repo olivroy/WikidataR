@@ -66,7 +66,7 @@ check_input <- function(input, substitution){
 
 # -------- Format converters --------
 # Simple functions to convert plain text descriptions into their most likely QID/PIDs
-#'@title Convert an input to a item QID.
+#'@title Convert an input to a item QID
 #'@description Convert an input string to the most likely item 
 #'\href{https://www.wikidata.org/wiki/Q43649390}{QID}.
 #'@param x a vector, data frame, or tibble of strings representing wikidata items
