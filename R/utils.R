@@ -116,7 +116,7 @@ as_qid <- function(x){
     out <- unlist(lapply(x,as_qid_nest2))
     out
   }
-  output <- bind_cols(lapply(tibble(x),as_qid_nest1))
+  output <- vec_cbind(lapply(tibble(x),as_qid_nest1))
   return(output)
 }
 
@@ -158,7 +158,7 @@ as_pid <- function(x){
     out <- unlist(lapply(x,as_pid_nest2))
     out
   }
-  output <- bind_cols(lapply(tibble(x),as_pid_nest1))
+  output <- vec_cbind(lapply(tibble(x),as_pid_nest1))
   return(output)
 }
 
@@ -193,7 +193,7 @@ as_sid <- function(x){
     out <- unlist(lapply(x,as_sid_nest2))
     out
   }
-  output <- bind_cols(lapply(tibble(x),as_sid_nest1))
+  output <- vec_cbind(lapply(tibble(x),as_sid_nest1))
   return(output)
 }
 
@@ -228,7 +228,7 @@ as_quot <- function(x,format="tibble"){
     out <- unlist(lapply(x,as_quot_nest2))
     out
   }
-  output <- bind_cols(lapply(tibble(x),as_quot_nest1))
+  output <- vec_cbind(lapply(tibble(x),as_quot_nest1))
   return(output)
 }
 
@@ -390,7 +390,7 @@ filter_qids <- function (ids,
       }else{
         desc <- "no description"
       }
-      out <- bind_rows(out,tibble(qid=qid,label=label,desc=desc))
+      out <- vec_rbind(out,tibble(qid=qid,label=label,desc=desc))
     }
   }else{
     for (i in 1:length(ids)){
@@ -419,7 +419,7 @@ filter_qids <- function (ids,
         }else{
           label <- "no label"
         }
-        out <- bind_rows(out,tibble(qid=qid,label=label,desc=desc))
+        out <- vec_rbind(out,tibble(qid=qid,label=label,desc=desc))
       }
     }
   }
@@ -528,7 +528,7 @@ createrows <- function(items,vector){
     vector <- tibble(vector)
     
     newQID <- which(items=="CREATE")
-    val    <- bind_rows(vector,tibble(data.frame(array("",dim=c(length(newQID),ncol(vector)),dimnames = list(NULL,colnames(vector))))))
+    val    <- vec_rbind(vector,tibble(data.frame(array("",dim=c(length(newQID),ncol(vector)),dimnames = list(NULL,colnames(vector))))))
     id     <- c(1:nrow(vector), newQID-seq_along(newQID)+0.5)
     out    <- tibble(val[order(id),])
     return(out)

@@ -163,7 +163,7 @@ write_wikibase <- function(items,
   colnames(QS$properties) <- "Prop"
   colnames(QS$values) <- "Value"
 
-  QS.tib <- bind_cols(
+  QS.tib <- vec_cbind(
     QS$items,
     QS$properties,
     QS$values

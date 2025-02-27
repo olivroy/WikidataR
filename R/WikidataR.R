@@ -11,7 +11,6 @@
 #' or aliases match a particular search term.
 #' @import WikidataQueryServiceR
 #' @import tibble
-#' @import dplyr
 #' @import stringr
 #' @import pbapply
 #' @import progress
@@ -19,7 +18,7 @@
 #' @import utils
 #' @importFrom readr format_tsv
 #' @importFrom readr format_delim
-#' @importFrom dplyr bind_cols
+#' @importFrom vctrs vec_cbind vec_rbind
 #' @importFrom stats var
 #' @importFrom stats cor
 #' @importFrom WikipediR page_content random_page query

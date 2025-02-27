@@ -162,7 +162,7 @@ write_wikidata <- function(items,
   colnames(QS$properties) <- "Prop"
   colnames(QS$values)     <- "Value"
   
-  QS.tib <- bind_cols(QS$items,
+  QS.tib <- vec_cbind(QS$items,
                       QS$properties,
                       QS$values)  
 
