@@ -30,6 +30,8 @@ Imports:
     progress,
     pbapply,
     vctrs,
+    dplyr,
+    tidyr,
     stats,
     readr,
     crayon,

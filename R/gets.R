@@ -135,9 +135,7 @@ get_example <- function(example_name){
 #'
 #'@param search_term A term to search for.
 #'
-#'@param language The language to return the labels and descriptions in; this should
-#'consist of an ISO language code. Defaults to \code{"en"}.
-#'
+#'@inheritParams searcher
 #'@param limit The number of results to return; set to \code{10} by default.
 #'
 #'@param ... further arguments to pass to \link[httr:GET]{GET}.

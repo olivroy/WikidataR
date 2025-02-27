@@ -23,10 +23,13 @@ find_property(
 \arguments{
 \item{search_term}{A term to search for.}
 
-\item{language}{The language to return the labels and descriptions in; this should
-consist of an ISO language code. Defaults to \code{"en"}.}
+\item{language}{the language to conduct the search in; this should
+consist of an ISO language code. Set to "en" by default.}
 
 \item{limit}{The number of results to return; set to \code{10} by default.}
+
+\item{response_language}{the language to return the labels and descriptions in; this should
+consist of an ISO language code. Set to "en" by default.}
 
 \item{...}{further arguments to pass to \link[httr:GET]{GET}.}
 }

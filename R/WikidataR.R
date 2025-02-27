@@ -17,6 +17,8 @@
 #' @importFrom vctrs vec_cbind vec_rbind
 #' @importFrom stats var
 #' @importFrom WikipediR page_content random_page query
-#' @importFrom httr user_agent
+#' @importFrom httr user_agent POST
+#' @importFrom dplyr slice n first
+#' @importFrom tidyr replace_na
 #' @importFrom jsonlite fromJSON
 "_PACKAGE"
