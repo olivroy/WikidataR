@@ -25,5 +25,4 @@
 #' @importFrom WikipediR page_content random_page query
 #' @importFrom httr user_agent
 #' @importFrom jsonlite fromJSON
-#' @aliases WikidataR WikidataR-package
-NULL
+"_PACKAGE"
