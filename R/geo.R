@@ -18,7 +18,7 @@
 #'
 #'@inheritDotParams httr::GET
 #'@return a data.frame of 5 columns:
-#'\itemize{
+#'\describe{
 #'  \item{item}{ the Wikidata identifier of each object associated with
 #'  \code{entity}.}
 #'  \item{name}{ the name of the item, if available, in the requested language. If it
@@ -114,7 +114,7 @@ get_geo_entity <- function(entity, language = "en", radius = NULL, limit=100, ..
 #'@inheritDotParams httr::GET
 #'
 #'@return a data.frame of 5 columns:
-#'\itemize{
+#'\describe{
 #'  \item{item}{ the Wikidata identifier of each object associated with
 #'  \code{entity}.}
 #'  \item{name}{ the name of the item, if available, in the requested language. If it

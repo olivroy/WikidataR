@@ -139,7 +139,7 @@ get_example <- function(example_name){
 #'consist of an ISO language code. Defaults to \code{"en"}.
 #'
 #'@param limit The number of results to return; set to \code{10} by default.
-#'
+#'@inheritParams searcher
 #'@inheritDotParams httr::GET
 #'
 #'@seealso \code{\link{get_random}} for selecting a random item or property,
@@ -153,7 +153,6 @@ get_example <- function(example_name){
 #'#Check for properties involving the peerage
 #'peerage_props <- find_property("peerage")
 #'
-#'@aliases find_item find_property
 #'@return A list containing the result of the query.
 #'@rdname find_item
 #'@export

@@ -48,7 +48,7 @@ details.}
 }
 \value{
 a data.frame of 5 columns:
-\itemize{
+\describe{
 \item{item}{ the Wikidata identifier of each object associated with
 \code{entity}.}
 \item{name}{ the name of the item, if available, in the requested language. If it

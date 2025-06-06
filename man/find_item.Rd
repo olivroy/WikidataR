@@ -28,6 +28,9 @@ consist of an ISO language code. Defaults to \code{"en"}.}
 
 \item{limit}{The number of results to return; set to \code{10} by default.}
 
+\item{response_language}{the language to return the labels and descriptions in; this should
+consist of an ISO language code. Set to "en" by default.}
+
 \item{...}{
   Arguments passed on to \code{\link[httr:GET]{httr::GET}}
   \describe{
