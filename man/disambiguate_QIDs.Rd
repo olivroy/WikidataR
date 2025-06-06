@@ -40,10 +40,10 @@ Can also be a list of lists (see examples)}
 \value{
 a vector of:
 \describe{
-  \item{QID}{Selected QID (for when an appropriate Wikidata match exists)}
-  \item{CREATE}{Mark that a new Wikidata item should be created (for when no appropriate Wikidata match yet exists)}
-  \item{NA}{Mark that no Wikidata item is needed}
-  \item{STOP}{Mark that the process was halted at this point (so that output can be used as input to the function later)}
+\item{QID}{Selected QID (for when an appropriate Wikidata match exists)}
+\item{CREATE}{Mark that a new Wikidata item should be created (for when no appropriate Wikidata match yet exists)}
+\item{NA}{Mark that no Wikidata item is needed}
+\item{STOP}{Mark that the process was halted at this point (so that output can be used as input to the function later)}
 }
 }
 \description{

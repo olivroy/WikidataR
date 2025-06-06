@@ -7,13 +7,13 @@
 as_sid(x)
 }
 \arguments{
-\item{x}{a vector, data frame, or tibble of strings representing Wikidata 
+\item{x}{a vector, data frame, or tibble of strings representing Wikidata
 source properties.}
 }
 \value{
 if the inputted string is a valid SID, return the string.
 If the inputted string matches a property label, return its SID.
-If the inputted string matches multiple labels of multiple properties, 
+If the inputted string matches multiple labels of multiple properties,
 return the SID of the first hit.
 }
 \description{

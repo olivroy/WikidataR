@@ -7,7 +7,7 @@
 \title{API client library for Wikidata}
 \description{
 This package serves as an API client for reading and writing
-to and from \href{https://www.wikidata.org/wiki/Wikidata:Main_Page}{Wikidata}, (including 
+to and from \href{https://www.wikidata.org/wiki/Wikidata:Main_Page}{Wikidata}, (including
 via the \href{https://quickstatements.toolforge.org/}{QuickStatements} format),
 as well as for reading from \href{https://www.wikipedia.org}{Wikipedia}.
 }
@@ -16,4 +16,21 @@ as well as for reading from \href{https://www.wikipedia.org}{Wikipedia}.
 \code{\link{get_item}} for a /specific/ item or property, or \code{\link{find_item}}
 for using search functionality to pull out item or property IDs where the descriptions
 or aliases match a particular search term.
+}
+\author{
+\strong{Maintainer}: Thomas Shafee \email{T.Shafee@latrobe.edu.au} (\href{https://orcid.org/0000-0002-2298-7593}{ORCID})
+
+Authors:
+\itemize{
+  \item Os Keyes (\href{https://orcid.org/0000-0001-5196-609X}{ORCID})
+  \item Serena Signorelli
+}
+
+Other contributors:
+\itemize{
+  \item Alex Lum (\href{https://orcid.org/0000-0002-9295-9053}{ORCID}) [contributor]
+  \item Christian Graul [contributor]
+  \item Mikhail Popov (\href{https://orcid.org/0000-0003-0145-8948}{ORCID}) [contributor]
+}
+
 }

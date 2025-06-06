@@ -12,7 +12,7 @@ wd_query(title, ...)
 \item{\\dots}{Additional parameters to supply to  \code{httr:\link[httr::POST]{POST}}.}
 }
 \value{
-A downloaded full wikidata object (item or property) formatted as a 
+A downloaded full wikidata object (item or property) formatted as a
 nested json list.
 }
 \description{

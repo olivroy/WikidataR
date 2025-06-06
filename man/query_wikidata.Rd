@@ -9,15 +9,15 @@ query_wikidata(sparql_query, format = "tibble", ...)
 \arguments{
 \item{sparql_query}{SPARQL query (can be a vector of queries)}
 
-\item{format}{`tibble` (default) returns a pure character data frame,
-`simple` returns a pure character vector, while
-`smart` fetches JSON-formatted data and returns a tibble with datetime
-columns converted to `POSIXct`.}
+\item{format}{\code{tibble} (default) returns a pure character data frame,
+\code{simple} returns a pure character vector, while
+\code{smart} fetches JSON-formatted data and returns a tibble with datetime
+columns converted to \code{POSIXct}.}
 
 \item{\\dots}{Additional parameters to supply to \code{httr:\link[httr::POST]{POST}}.}
 }
 \value{
-A `tibble` or `vector`. Note: QID values will be returned as QIDs, rather than URLs.
+A \code{tibble} or \code{vector}. Note: QID values will be returned as QIDs, rather than URLs.
 }
 \description{
 Makes a POST request to Wikidata Query Service SPARQL endpoint.
@@ -26,11 +26,13 @@ Makes a POST request to Wikidata Query Service SPARQL endpoint.
 
 There is a hard query deadline configured which is set to 60 seconds. There
 are also following limits:
-- One client (user agent + IP) is allowed 60 seconds of processing time each
-  60 seconds
-- One client is allowed 30 error queries per minute
+\itemize{
+\item One client (user agent + IP) is allowed 60 seconds of processing time each
+60 seconds
+\item One client is allowed 30 error queries per minute
 See \href{https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual#Query_limits}{query limits section}
 in the Wikidata Query Service User Manual for more information.
+}
 }
 
 \examples{

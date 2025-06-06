@@ -24,14 +24,14 @@ to restrict the search to.}
 \value{
 a data.frame of 5 columns:
 \itemize{
- \item{item}{ the Wikidata identifier of each object associated with
- \code{entity}.}
- \item{name}{ the name of the item, if available, in the requested language. If it
- is not available, \code{NA} will be returned instead.}
- \item{latitude}{ the latitude of \code{item}}
- \item{longitude}{ the longitude of \code{item}}
- \item{entity}{ the entity the item is associated with (necessary for multi-entity
- queries).}
+\item{item}{ the Wikidata identifier of each object associated with
+\code{entity}.}
+\item{name}{ the name of the item, if available, in the requested language. If it
+is not available, \code{NA} will be returned instead.}
+\item{latitude}{ the latitude of \code{item}}
+\item{longitude}{ the longitude of \code{item}}
+\item{entity}{ the entity the item is associated with (necessary for multi-entity
+queries).}
 }
 }
 \description{

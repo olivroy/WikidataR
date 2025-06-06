@@ -15,7 +15,7 @@ If the inputted string matches an item label, return its QID.
 If the inputted string matches multiple labels of multiple items, return the QID of the first hit.
 }
 \description{
-Convert an input string to the most likely item 
+Convert an input string to the most likely item
 \href{https://www.wikidata.org/wiki/Q43649390}{QID}.
 }
 \examples{
