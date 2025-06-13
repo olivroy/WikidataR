@@ -217,7 +217,7 @@ write_wikidata <- function(items,
   # remove any impossible rows (value is NA)
   if(nrow(QS.tib)!=1){
     QS.tib <- QS.tib[!is.na(QS.tib$Value),]
-    QS.tib <- as_tibble(apply(QS.tib,2,replace_na,"")) 
+    QS.tib <- as_tibble(apply(QS.tib,2,tidyr::replace_na,"")) 
   }
   
   # format up the output

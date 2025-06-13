@@ -9,21 +9,22 @@
 "_PACKAGE"
 
 ## usethis namespace: start
-#' @import WikidataQueryServiceR
-#' @import tibble
+#' @import crayon
 #' @import dplyr
-#' @import stringr
 #' @import pbapply
 #' @import progress
-#' @import crayon
+#' @import stringr
+#' @import tibble
 #' @import utils
-#' @importFrom readr format_tsv
-#' @importFrom readr format_delim
+#' @import WikidataQueryServiceR
 #' @importFrom dplyr bind_cols
-#' @importFrom stats var
-#' @importFrom stats cor
-#' @importFrom WikipediR page_content random_page query
+#' @importFrom httr POST
 #' @importFrom httr user_agent
 #' @importFrom jsonlite fromJSON
+#' @importFrom readr format_delim
+#' @importFrom readr format_tsv
+#' @importFrom stats cor
+#' @importFrom stats var
+#' @importFrom WikipediR page_content random_page query
 ## usethis namespace: end
 NULL
