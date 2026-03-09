@@ -3,7 +3,7 @@
 #'@description Utility wrapper for Wikidata API to download item.
 #'Used by \code{get_item} and \code{get_property}.
 #'@param title The Wikidata item or property as a string.
-#'@param ... Additional parameters to supply to  \code{httr:\link[httr:POST]{POST}}.
+#'@inheritDotParams httr::POST
 #'@return A downloaded full wikidata object (item or property) formatted as a 
 #'nested json list.
 #'@export
@@ -24,7 +24,7 @@ wd_query <- function(title, ...){
 #'@param ns string indicating namespace, most commonly "Main" for QID items, "Property" 
 #'for PID properties.
 #'@param limit How many random object to return.
-#'@param ... Additional parameters to supply to  \code{httr:\link[httr:POST]{POST}}.
+#'@inheritDotParams httr::POST
 #'@return Downloaded full wikidata objects (items or properties) formatted 
 #'as nested json lists.
 #'@export
@@ -44,7 +44,7 @@ wd_rand_query <- function(ns, limit, ...){
 #'@description Utility wrapper for wikidata spargl endpoint to download items.
 #'Used by \code{get_geo_entity} and \code{get_geo_box}.
 #'@param query The SPARQL query as a string
-#'@param ... Additional parameters to supply to \code{httr:\link[httr:POST]{POST}}.
+#'@inheritDotParams httr::POST
 #'@return a download of the full wikidata objects formatted as a nested json list
 #'@export
 sparql_query <- function(query, ...){
@@ -65,7 +65,7 @@ sparql_query <- function(query, ...){
 #'   `simple` returns a pure character vector, while
 #'   `smart` fetches JSON-formatted data and returns a tibble with datetime
 #'   columns converted to `POSIXct`.
-#' @param ... Additional parameters to supply to \code{httr:\link[httr:POST]{POST}}.
+#'@inheritDotParams httr::POST
 #' @return A `tibble` or `vector`. Note: QID values will be returned as QIDs, rather than URLs.
 #' @section Query limits:
 #' There is a hard query deadline configured which is set to 60 seconds. There

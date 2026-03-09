@@ -16,8 +16,7 @@
 #'
 #'@param limit the maximum number of results to return.
 #'
-#'@param ... further arguments to pass to \link[httr:GET]{GET}.
-#'
+#'@inheritDotParams httr::GET
 #'@return a data.frame of 5 columns:
 #'\describe{
 #'  \item{item}{ the Wikidata identifier of each object associated with
@@ -114,11 +113,12 @@ get_geo_entity <- function(entity, language = "en", radius = NULL, limit=100, ..
 #'@param language the two-letter language code to use for the name
 #'of the item. "en" by default.
 #'
-#'@param ... further arguments to pass to \link[httr:GET]{GET}.
+#'@inheritDotParams httr::GET
 #'
 #'@return a data.frame of 5 columns:
 #'\describe{
-#'  \item{item}{ the Wikidata identifier of each object associated with \code{entity}.}
+#'  \item{item}{ the Wikidata identifier of each object associated with
+#'  \code{entity}.}
 #'  \item{name}{ the name of the item, if available, in the requested language. If it
 #'  is not available, \code{NA} will be returned instead.}
 #'  \item{latitude}{ the latitude of \code{item}}

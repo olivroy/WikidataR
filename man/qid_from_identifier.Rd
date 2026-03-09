@@ -21,7 +21,7 @@ A vector of QIDs corresponding to identifiers submitted.
 Convert unique identifiers to QIDs (for items in Wikidata).
 }
 \details{
-The \href{https://www.wikidata.org/wiki/Q43649390}{Wikidata Q identifier} (QID) is the unique identifier (UID) 
+The \href{https://www.wikidata.org/wiki/Q43649390}{Wikidata Q identifier} (QID) is the unique identifier (UID)
 used in Wikidata.
 }
 \examples{

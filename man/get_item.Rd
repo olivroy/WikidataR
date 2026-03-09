@@ -16,7 +16,22 @@ even with an included namespace ("Property:P10") - the function will format
 it appropriately. This function is vectorized and will happily accept
 multiple IDs.}
 
-\item{...}{further arguments to pass to \link[httr:GET]{GET}.}
+\item{...}{
+  Arguments passed on to \code{\link[httr:GET]{httr::GET}}
+  \describe{
+    \item{\code{url}}{the url of the page to retrieve}
+    \item{\code{config}}{Additional configuration settings such as http
+authentication (\code{\link[httr:authenticate]{authenticate()}}), additional headers
+(\code{\link[httr:add_headers]{add_headers()}}), cookies (\code{\link[httr:set_cookies]{set_cookies()}}) etc.
+See \code{\link[httr:config]{config()}} for full details and list of helpers.}
+    \item{\code{handle}}{The handle to use with this request. If not
+supplied, will be retrieved and reused from the \code{\link[httr:handle_pool]{handle_pool()}}
+based on the scheme, hostname and port of the url. By default \pkg{httr}
+requests to the same scheme/host/port combo. This substantially reduces
+connection time, and ensures that cookies are maintained over multiple
+requests to the same host. See \code{\link[httr:handle_pool]{handle_pool()}} for more
+details.}
+  }}
 }
 \description{
 \code{get_item} and \code{get_property} allow you to retrieve the data associated

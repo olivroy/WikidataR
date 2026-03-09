@@ -33,7 +33,7 @@ Using the same id will add additional statements to those new items}
 \item{properties}{a vector of strings indicating the properties to add as statements (as PIDs or labels).
 Note: In contrast to \code{write_wikidata}, this function takes no labels as input, just PIDs.
 Four special properties can also be used: labels, aliases, descriptions and sitelinks.
-See [this link](https://www.wikidata.org/wiki/Help:QuickStatements#Adding_labels,_aliases,_descriptions_and_sitelinks) for the syntax.}
+See \href{https://www.wikidata.org/wiki/Help:QuickStatements#Adding_labels,_aliases,_descriptions_and_sitelinks}{this link} for the syntax.}
 
 \item{values}{a vector of strings indicating the values to add as statements (as QIDs).
 Note: if strings are provided, they will be treated as plain text.}
@@ -55,21 +55,21 @@ be removed from the item rather than added (default = FALSE)}
 
 \item{format}{output format as a string. Options include:
 \describe{
-  \item{tibble}{easiest format to further manipulation in R}
-  \item{csv}{can be copy-pasted to the Wikibase QuickStatements website (or manipulated in a spreadsheet programs). In contrast to write_wikidata function the delimiter is `tab`, because Quickstatements expect tab-separated data}
-  \item{api}{a url that can be copy-pasted into a web browser, or automatically submitted (see \code{api.submit} parameter)}
-  \item{website}{open a [QuickStatements](https://quickstatements.toolforge.org/) web browser window summarizing the edits to be made to Wikidata)}
+\item{tibble}{easiest format to further manipulation in R}
+\item{csv}{can be copy-pasted to the Wikibase QuickStatements website (or manipulated in a spreadsheet programs). In contrast to write_wikidata function the delimiter is \code{tab}, because Quickstatements expect tab-separated data}
+\item{api}{a url that can be copy-pasted into a web browser, or automatically submitted (see \code{api.submit} parameter)}
+\item{website}{open a \href{https://quickstatements.toolforge.org/}{QuickStatements} web browser window summarizing the edits to be made to Wikidata)}
 }}
 
 \item{format.csv.file}{path to save the csv file. If none is provided, then printed to console.}
 
 \item{api.username}{a string indicating your Wikimedia username}
 
-\item{api.token}{a string indicating your api token (the unique identifier that you can find listed at [your user page](https://quickstatements.toolforge.org/#/user))}
+\item{api.token}{a string indicating your api token (the unique identifier that you can find listed at \href{https://quickstatements.toolforge.org/#/user}{your user page})}
 
 \item{api.format}{a string indicating which version of the quickstatement format used to submit the api (default = "v1")}
 
-\item{api.batchname}{a string create a named batch (listed at [your batch history page](https://quickstatements.toolforge.org/#/batches)) and tag in the edit summaries}
+\item{api.batchname}{a string create a named batch (listed at \href{https://quickstatements.toolforge.org/#/batches}{your batch history page}) and tag in the edit summaries}
 
 \item{api.submit}{boolian indicating whether to submit instruction directly to wikidata (else returns the URL that can be copy-pasted into a web browser)}
 

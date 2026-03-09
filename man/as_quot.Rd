@@ -9,17 +9,17 @@ as_quot(x, format = "tibble")
 \arguments{
 \item{x}{a vector, data frame, or tibble of strings}
 
-\item{format}{either "tibble" / "csv" to use plain quotation marks (default), 
-or "api" / "website" to use '\%22'}
+\item{format}{either "tibble" / "csv" to use plain quotation marks (default),
+or "api" / "website" to use \code{'\\\%22'}}
 }
 \value{
 A tibble of items inside of escaped quotation marks
-unless they are already in escaped quotation marks, is a 
-\href{https://www.wikidata.org/wiki/Q43649390}{QID}, 
+unless they are already in escaped quotation marks, is a
+\href{https://www.wikidata.org/wiki/Q43649390}{QID},
 in which chase it is returned unchanged.
 }
 \description{
-Add escaped quotation marks around strings that need them ready for 
+Add escaped quotation marks around strings that need them ready for
 submission to an API.
 }
 \examples{

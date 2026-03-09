@@ -6,19 +6,25 @@
 #' \code{\link{get_item}} for a /specific/ item or property, or \code{\link{find_item}}
 #' for using search functionality to pull out item or property IDs where the descriptions
 #' or aliases match a particular search term.
-#' @import WikidataQueryServiceR
-#' @import tibble
-#' @import stringr
+"_PACKAGE"
+
+## usethis namespace: start
+#' @import crayon
+#' @import dplyr
 #' @import pbapply
 #' @import progress
-#' @import crayon
+#' @import stringr
+#' @import tibble
 #' @import utils
-#' @importFrom readr format_tsv format_delim
-#' @importFrom vctrs vec_cbind vec_rbind
+#' @import WikidataQueryServiceR
+#' @importFrom dplyr bind_cols
+#' @importFrom httr POST
+#' @importFrom httr user_agent
+#' @importFrom jsonlite fromJSON
+#' @importFrom readr format_delim
+#' @importFrom readr format_tsv
+#' @importFrom stats cor
 #' @importFrom stats var
 #' @importFrom WikipediR page_content random_page query
-#' @importFrom httr user_agent POST
-#' @importFrom dplyr slice n first
-#' @importFrom tidyr replace_na
-#' @importFrom jsonlite fromJSON
-"_PACKAGE"
+## usethis namespace: end
+NULL

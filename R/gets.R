@@ -12,7 +12,7 @@
 #'it appropriately. This function is vectorized and will happily accept
 #'multiple IDs.
 #'
-#'@param ... further arguments to pass to \link[httr:GET]{GET}.
+#'@inheritDotParams httr::GET
 #'
 #'@seealso \code{\link{get_random}} for selecting a random item or property,
 #'or \code{\link{find_item}} for using search functionality to pull out
@@ -57,7 +57,7 @@ get_property <- function(id, ...){
 #'
 #'@param limit how many random items to return. 1 by default, but can be higher.
 #'
-#'@param ... arguments to pass to \link[httr:GET]{GET}.
+#'@inheritDotParams httr::GET
 #'
 #'@seealso \code{\link{get_item}} for selecting a specific item or property,
 #'or \code{\link{find_item}} for using search functionality to pull out
@@ -136,9 +136,7 @@ get_example <- function(example_name){
 #'@param search_term A term to search for.
 #'
 #'@inheritParams searcher
-#'@param limit The number of results to return; set to \code{10} by default.
-#'
-#'@param ... further arguments to pass to \link[httr:GET]{GET}.
+#'@inheritDotParams httr::GET
 #'
 #'@seealso \code{\link{get_random}} for selecting a random item or property,
 #'or \code{\link{get_item}} for selecting a specific item or property.
@@ -151,7 +149,6 @@ get_example <- function(example_name){
 #'#Check for properties involving the peerage
 #'peerage_props <- find_property("peerage")
 #'
-#'@aliases find_item find_property
 #'@return A list containing the result of the query.
 #'@rdname find_item
 #'@export
