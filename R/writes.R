@@ -112,9 +112,9 @@ write_wikidata <- function(items,
   if(var(unlist(rowcount))!=0){
     for (x in 1:length(QS)){
       if(is.null(nrow(QS[[x]]))){
-        QS[[x]] <- slice(tibble(QS[[x]]),rep(1:n(), each=rowmax))
+        QS[[x]] <- dplyr::slice(tibble(QS[[x]]),rep(1:dplyr::n(), each=rowmax))
       }else if (nrow(QS[[x]])==1){ 
-        QS[[x]] <- slice(tibble(QS[[x]]),rep(1:n(), each=rowmax)) 
+        QS[[x]] <- dplyr::slice(tibble(QS[[x]]),rep(1:dplyr::n(), each=rowmax)) 
       }else if(nrow(QS[[x]])==rowmax){ 
         QS[[x]] <- QS[[x]]
       }else{

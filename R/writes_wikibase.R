@@ -129,7 +129,7 @@ write_wikibase <- function(items,
       if (nrow(QS[[x]]) == rowmax) {
         QS[[x]] <- QS[[x]]
       } else if (nrow(QS[[x]]) == 1) {
-        QS[[x]] <- slice(QS[[x]], rep(1:n(), each = rowmax))
+        QS[[x]] <- dplyr::slice(QS[[x]], rep(1:dplyr::n(), each = rowmax))
       } else {
         stoprun <- TRUE
         warning(paste0(
