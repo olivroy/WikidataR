@@ -33,7 +33,7 @@ Imports:
     dplyr,
     tidyr,
     stats,
-    readr,
+    readr (>= 2.0.0),
     crayon,
     tidyr,
     utils
