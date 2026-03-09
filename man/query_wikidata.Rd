@@ -9,15 +9,56 @@ query_wikidata(sparql_query, format = "tibble", ...)
 \arguments{
 \item{sparql_query}{SPARQL query (can be a vector of queries)}
 
-\item{format}{`tibble` (default) returns a pure character data frame,
-`simple` returns a pure character vector, while
-`smart` fetches JSON-formatted data and returns a tibble with datetime
-columns converted to `POSIXct`.}
+\item{format}{\code{tibble} (default) returns a pure character data frame,
+\code{simple} returns a pure character vector, while
+\code{smart} fetches JSON-formatted data and returns a tibble with datetime
+columns converted to \code{POSIXct}.}
 
-\item{\\dots}{Additional parameters to supply to \code{httr:\link[httr::POST]{POST}}.}
+\item{...}{
+  Arguments passed on to \code{\link[httr:POST]{httr::POST}}
+  \describe{
+    \item{\code{url}}{the url of the page to retrieve}
+    \item{\code{config}}{Additional configuration settings such as http
+authentication (\code{\link[httr:authenticate]{authenticate()}}), additional headers
+(\code{\link[httr:add_headers]{add_headers()}}), cookies (\code{\link[httr:set_cookies]{set_cookies()}}) etc.
+See \code{\link[httr:config]{config()}} for full details and list of helpers.}
+    \item{\code{body}}{One of the following:
+\itemize{
+\item \code{FALSE}: No body. This is typically not used with \code{POST},
+\code{PUT}, or \code{PATCH}, but can be useful if you need to send a
+bodyless request (like \code{GET}) with \code{VERB()}.
+\item \code{NULL}: An empty body
+\item \code{""}: A length 0 body
+\item \code{upload_file("path/")}: The contents of a file.  The mime
+type will be guessed from the extension, or can be supplied explicitly
+as the second argument to \code{upload_file()}
+\item A character or raw vector: sent as is in body. Use
+\code{\link[httr:content_type]{content_type()}} to tell the server what sort of data
+you are sending.
+\item A named list: See details for encode.
+}}
+    \item{\code{encode}}{If the body is a named list, how should it be encoded? Can be
+one of form (application/x-www-form-urlencoded), multipart,
+(multipart/form-data), or json (application/json).
+
+For "multipart", list elements can be strings or objects created by
+\code{\link[httr:upload_file]{upload_file()}}. For "form", elements are coerced to strings
+and escaped, use \code{I()} to prevent double-escaping. For "json",
+parameters are automatically "unboxed" (i.e. length 1 vectors are
+converted to scalars). To preserve a length 1 vector as a vector,
+wrap in \code{I()}. For "raw", either a character or raw vector. You'll
+need to make sure to set the \code{\link[httr:content_type]{content_type()}} yourself.}
+    \item{\code{handle}}{The handle to use with this request. If not
+supplied, will be retrieved and reused from the \code{\link[httr:handle_pool]{handle_pool()}}
+based on the scheme, hostname and port of the url. By default \pkg{httr}
+requests to the same scheme/host/port combo. This substantially reduces
+connection time, and ensures that cookies are maintained over multiple
+requests to the same host. See \code{\link[httr:handle_pool]{handle_pool()}} for more
+details.}
+  }}
 }
 \value{
-A `tibble` or `vector`. Note: QID values will be returned as QIDs, rather than URLs.
+A \code{tibble} or \code{vector}. Note: QID values will be returned as QIDs, rather than URLs.
 }
 \description{
 Makes a POST request to Wikidata Query Service SPARQL endpoint.
@@ -26,11 +67,13 @@ Makes a POST request to Wikidata Query Service SPARQL endpoint.
 
 There is a hard query deadline configured which is set to 60 seconds. There
 are also following limits:
-- One client (user agent + IP) is allowed 60 seconds of processing time each
-  60 seconds
-- One client is allowed 30 error queries per minute
+\itemize{
+\item One client (user agent + IP) is allowed 60 seconds of processing time each
+60 seconds
+\item One client is allowed 30 error queries per minute
 See \href{https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual#Query_limits}{query limits section}
 in the Wikidata Query Service User Manual for more information.
+}
 }
 
 \examples{

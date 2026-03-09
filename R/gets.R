@@ -12,7 +12,7 @@
 #'it appropriately. This function is vectorized and will happily accept
 #'multiple IDs.
 #'
-#'@param \\dots further arguments to pass to de{httr:ink[httr::GET]{GET}}.
+#'@inheritDotParams httr::GET
 #'
 #'@seealso \code{\link{get_random}} for selecting a random item or property,
 #'or \code{\link{find_item}} for using search functionality to pull out
@@ -57,7 +57,7 @@ get_property <- function(id, ...){
 #'
 #'@param limit how many random items to return. 1 by default, but can be higher.
 #'
-#'@param \\dots arguments to pass to de{httr:ink[httr::GET]{GET}}.
+#'@inheritDotParams httr::GET
 #'
 #'@seealso \code{\link{get_item}} for selecting a specific item or property,
 #'or \code{\link{find_item}} for using search functionality to pull out
@@ -139,8 +139,8 @@ get_example <- function(example_name){
 #'consist of an ISO language code. Defaults to \code{"en"}.
 #'
 #'@param limit The number of results to return; set to \code{10} by default.
-#'
-#'@param \\dots further arguments to pass to de{httr:ink[httr::GET]{GET}}.
+#'@inheritParams searcher
+#'@inheritDotParams httr::GET
 #'
 #'@seealso \code{\link{get_random}} for selecting a random item or property,
 #'or \code{\link{get_item}} for selecting a specific item or property.
@@ -153,7 +153,6 @@ get_example <- function(example_name){
 #'#Check for properties involving the peerage
 #'peerage_props <- find_property("peerage")
 #'
-#'@aliases find_item find_property
 #'@return A list containing the result of the query.
 #'@rdname find_item
 #'@export

@@ -202,7 +202,7 @@ as_sid <- function(x){
 #'submission to an API.
 #'@param x a vector, data frame, or tibble of strings
 #'@param format either "tibble" / "csv" to use plain quotation marks (default), 
-#'or "api" / "website" to use '\%22'
+#'or "api" / "website" to use `'\%22'`
 #'@return A tibble of items inside of escaped quotation marks
 #'unless they are already in escaped quotation marks, is a 
 #'\href{https://www.wikidata.org/wiki/Q43649390}{QID}, 

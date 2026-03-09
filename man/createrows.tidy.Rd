@@ -11,7 +11,7 @@ createrows.tidy(QS.tib)
 }
 \value{
 a tibble, with items that start with "CREATE" followed by any unique text causing the
-addition of a "Create" line above, being replaced with "LAST" in the QuickStatements 
+addition of a "Create" line above, being replaced with "LAST" in the QuickStatements
 format to create new QIDs.
 }
 \description{

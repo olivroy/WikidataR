@@ -19,7 +19,7 @@ consist of an ISO language code. Set to "en" by default.}
 
 \item{type}{type of wikidata object to return (default = "item")}
 
-\item{\\dots}{Additional parameters to supply to [httr::POST]}
+\item{\\dots}{Additional parameters to supply to \link[httr:POST]{httr::POST}}
 }
 \value{
 If the inputted string matches an item label, return its QID.

@@ -30,7 +30,7 @@ For a QID or vector of QIDs, remove ones that match a particular statement
 (e.g. remove all that are instances of academic publications or books).
 }
 \details{
-The \href{https://www.wikidata.org/wiki/Q43649390}{Wikidata Q identifier} (QID) 
+The \href{https://www.wikidata.org/wiki/Q43649390}{Wikidata Q identifier} (QID)
 is the unique identifier (UID) used in Wikidata.
 }
 \examples{

@@ -8,19 +8,19 @@ get_example(example_name)
 }
 \arguments{
 \item{example_name}{the names of the examples as they appear on
-[this page](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples)}
+\href{https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples}{this page}}
 }
 \value{
 The SPARQL query as a character vector.
 }
 \description{
 Gets the specified example(s) from
-  [SPARQL query service examples page](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples)
-  using [Wikidata's MediaWiki API](https://www.wikidata.org/w/api.php).
+\href{https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples}{SPARQL query service examples page}
+using \href{https://www.wikidata.org/w/api.php}{Wikidata's MediaWiki API}.
 }
 \details{
 If you are planning on extracting multiple examples, please provide
-  all the names as a single vector for efficiency.
+all the names as a single vector for efficiency.
 }
 \examples{
 \dontrun{
@@ -34,5 +34,5 @@ query_wikidata(sparql_query)
 }
 }
 \seealso{
-[query_wikidata]
+\link{query_wikidata}
 }

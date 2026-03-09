@@ -19,19 +19,34 @@ to restrict the search to.}
 
 \item{limit}{the maximum number of results to return.}
 
-\item{\\dots}{further arguments to pass to de{httr:ink[httr::GET]{GET}}.}
+\item{...}{
+  Arguments passed on to \code{\link[httr:GET]{httr::GET}}
+  \describe{
+    \item{\code{url}}{the url of the page to retrieve}
+    \item{\code{config}}{Additional configuration settings such as http
+authentication (\code{\link[httr:authenticate]{authenticate()}}), additional headers
+(\code{\link[httr:add_headers]{add_headers()}}), cookies (\code{\link[httr:set_cookies]{set_cookies()}}) etc.
+See \code{\link[httr:config]{config()}} for full details and list of helpers.}
+    \item{\code{handle}}{The handle to use with this request. If not
+supplied, will be retrieved and reused from the \code{\link[httr:handle_pool]{handle_pool()}}
+based on the scheme, hostname and port of the url. By default \pkg{httr}
+requests to the same scheme/host/port combo. This substantially reduces
+connection time, and ensures that cookies are maintained over multiple
+requests to the same host. See \code{\link[httr:handle_pool]{handle_pool()}} for more
+details.}
+  }}
 }
 \value{
 a data.frame of 5 columns:
-\itemize{
- \item{item}{ the Wikidata identifier of each object associated with
- \code{entity}.}
- \item{name}{ the name of the item, if available, in the requested language. If it
- is not available, \code{NA} will be returned instead.}
- \item{latitude}{ the latitude of \code{item}}
- \item{longitude}{ the longitude of \code{item}}
- \item{entity}{ the entity the item is associated with (necessary for multi-entity
- queries).}
+\describe{
+\item{item}{ the Wikidata identifier of each object associated with
+\code{entity}.}
+\item{name}{ the name of the item, if available, in the requested language. If it
+is not available, \code{NA} will be returned instead.}
+\item{latitude}{ the latitude of \code{item}}
+\item{longitude}{ the longitude of \code{item}}
+\item{entity}{ the entity the item is associated with (necessary for multi-entity
+queries).}
 }
 }
 \description{
